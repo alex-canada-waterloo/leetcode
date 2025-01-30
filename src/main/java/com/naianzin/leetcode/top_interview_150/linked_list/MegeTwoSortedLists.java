@@ -1,19 +1,9 @@
 package com.naianzin.leetcode.top_interview_150.linked_list;
 
+import com.naianzin.leetcode.util.model.ListNode;
+
 public class MegeTwoSortedLists {
-
-    public static class ListNode {
-        int val;
-        ListNode next;
-
-        public ListNode(){}
-
-        public ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
+    
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
 
         if (list1 == null && list2 == null) {

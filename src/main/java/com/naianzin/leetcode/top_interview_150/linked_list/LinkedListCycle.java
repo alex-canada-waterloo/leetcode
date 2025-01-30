@@ -1,15 +1,8 @@
 package com.naianzin.leetcode.top_interview_150.linked_list;
 
-public class LinkedListCycle {
+import com.naianzin.leetcode.util.model.ListNode;
 
-    class ListNode {
-        int val;
-        ListNode next;
-        ListNode(int x) {
-            val = x;
-            next = null;
-        }
-    }
+public class LinkedListCycle {
 
     public boolean hasCycle(ListNode head) {
         var fast = head;
