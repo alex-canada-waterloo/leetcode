@@ -2,7 +2,7 @@ package com.naianzin.leetcode.top_interview_150.linked_list;
 
 import com.naianzin.leetcode.util.model.ListNode;
 
-import static java.util.Objects.nonNull;
+import static com.naianzin.leetcode.util.print.PrintLinkedList.printLinkedList;
 
 // https://leetcode.com/problems/remove-nth-node-from-end-of-list/?envType=study-plan-v2&envId=top-interview-150
 public class RemoveNthNodeFromTheEnd {
@@ -35,17 +35,16 @@ public class RemoveNthNodeFromTheEnd {
     public static void main(String[] args) {
         var service = new RemoveNthNodeFromTheEnd();
 
-        var head = new ListNode(1,
-                new ListNode(2,
-                        new ListNode(3,
-                                new ListNode(4,
-                                        new ListNode(5, new ListNode(
-                                                6, null))))));
+        var head = new ListNode(
+            1, new ListNode(
+            2, new ListNode(
+            3, new ListNode(
+            4,  new ListNode(
+            5, new ListNode(
+            6, null))))));
 
-        var rotated = service.removeNthFromEnd(head, 6);
-        while(nonNull(rotated)) {
-            System.out.println(rotated.val);
-            rotated = rotated.next;
-        }
+        var result = service.removeNthFromEnd(head, 6);
+
+        printLinkedList(result);
     }
 }

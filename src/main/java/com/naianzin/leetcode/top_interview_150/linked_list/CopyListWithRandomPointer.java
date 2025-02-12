@@ -6,7 +6,7 @@ import java.util.Map;
 // https://leetcode.com/problems/copy-list-with-random-pointer/description/?envType=study-plan-v2&envId=top-interview-150
 public class CopyListWithRandomPointer {
 
-    private static class Node {
+    public static class Node {
         int val;
         Node next;
         Node random;
@@ -83,8 +83,7 @@ public class CopyListWithRandomPointer {
         node10.random = node11;
         node1.random = node7;
 
-        var result = service.copyRandomList(node7);
-        var it = result;
+        var it = service.copyRandomList(node7);
         while (it != null) {
             var random = it.random;
             if (random != null) {
@@ -95,11 +94,6 @@ public class CopyListWithRandomPointer {
 
             it = it.next;
         }
-        // [[7,null],
-        // [13,0],
-        // [11,4],
-        // [10,2],
-        // [1,0]]
     }
 
 }

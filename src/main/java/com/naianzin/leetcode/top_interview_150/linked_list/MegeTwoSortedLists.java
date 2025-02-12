@@ -2,6 +2,8 @@ package com.naianzin.leetcode.top_interview_150.linked_list;
 
 import com.naianzin.leetcode.util.model.ListNode;
 
+import static com.naianzin.leetcode.util.print.PrintLinkedList.printLinkedList;
+
 public class MegeTwoSortedLists {
     
     public ListNode mergeTwoLists(ListNode list1, ListNode list2) {
@@ -43,7 +45,7 @@ public class MegeTwoSortedLists {
         }
         if (p1 != null) {
             tail.next = p1;
-        } else if (p2 != null) {
+        } else {
             tail.next = p2;
         }
         return result;
@@ -54,9 +56,6 @@ public class MegeTwoSortedLists {
         var list2 = new ListNode(1, new ListNode(3, new ListNode(4, null)));
         var service = new MegeTwoSortedLists();
         var result = service.mergeTwoLists(list1, list2);
-        while (result != null) {
-            System.out.println(result.val);
-            result = result.next;
-        }
+        printLinkedList(result);
     }
 }
