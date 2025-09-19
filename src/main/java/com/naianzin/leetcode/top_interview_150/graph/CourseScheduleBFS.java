@@ -53,11 +53,11 @@ public class CourseScheduleBFS {
     public static void main(String[] args) {
         var service = new CourseScheduleBFS();
 
-//        var prerequisites1 = new int[][] {{1, 0}};
-//        System.out.println(service.canFinish(2, prerequisites1) + " Expected: true");
-//
-//        var prerequisites2 = new int[][] {{1, 0}, {0, 1}};
-//        System.out.println(service.canFinish(2, prerequisites2) + " Expected: false");
+        var prerequisites1 = new int[][] {{1, 0}};
+        System.out.println(service.canFinish(2, prerequisites1) + " Expected: true");
+
+        var prerequisites2 = new int[][] {{1, 0}, {0, 1}};
+        System.out.println(service.canFinish(2, prerequisites2) + " Expected: false");
 
         var prerequisites3 = new int[][] {{1,4},{2,4},{3,1},{3,2}};
         System.out.println(service.canFinish(5, prerequisites3) + " Expected: true");
